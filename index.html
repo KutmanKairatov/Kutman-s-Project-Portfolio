@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"> <!-- Кодировка для правильного отображения русского текста -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптация под телефон -->
+  <title>Design Agency</title> <!-- Название вкладки браузера -->
+  <link rel="stylesheet" href="style.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+  <header class="header" id="top"> <!-- Верхняя часть сайта -->
+    <div class="container nav">
+      <a class="logo" href="#top">Design<span>Agency</span></a> <!-- Логотип -->
+      <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button> <!-- Кнопка меню на телефоне -->
+      <nav class="menu" id="menu"> <!-- Навигация по разделам -->
+        <a href="#services">Услуги</a>
+        <a href="#about">О нас</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button class="theme-btn" id="themeBtn">Тема</button> <!-- Переключение темы -->
+    </div>
+  </header>
+
+  <main>
+    <section class="hero"> <!-- Главный экран -->
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="small-title">DESIGN AGENCY</p>
+          <h1>Увеличиваем успех вашего бизнеса</h1>
+          <p>Создаём современные сайты, которые помогают компаниям находить клиентов.</p>
+          <a class="main-btn" href="#contact">Начать проект</a>
+        </div>
+        <img class="hero-photo" src="WhatsApp Image 2026-11-06 at 15.27.09.jpeg" alt="Фото автора сайта"> <!-- Главное фото -->
+      </div>
+    </section>
+
+    <section class="section" id="services"> <!-- Услуги агентства -->
+      <div class="container">
+        <p class="small-title">ЧТО МЫ ДЕЛАЕМ</p>
+        <h2>Наши услуги</h2>
+        <div class="services">
+          <article class="service-card"><h3>Веб-дизайн</h3><p>Создаём красивый и удобный дизайн сайтов.</p></article>
+          <article class="service-card"><h3>Разработка сайтов</h3><p>Делаем адаптивные сайты для компьютера и телефона.</p></article>
+          <article class="service-card"><h3>Продвижение</h3><p>Помогаем бизнесу стать заметнее в интернете.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about"> <!-- Информация о компании -->
+      <div class="container">
+        <p class="small-title">О НАС</p>
+        <h2>Мы помогаем бизнесу расти</h2>
+        <p>Наша цель — создавать простые, современные и полезные цифровые решения для клиентов.</p>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio"> <!-- Примеры работ -->
+      <div class="container">
+        <p class="small-title">НАШИ РАБОТЫ</p>
+        <h2>Портфолио</h2>
+        <div class="filters"> <!-- Кнопки фильтрации проектов -->
+          <button class="filter active" data-type="all">Все</button>
+          <button class="filter" data-type="design">Дизайн</button>
+          <button class="filter" data-type="web">Сайты</button>
+        </div>
+        <div class="projects">
+          <article class="project" data-type="design"><img src="WhatsApp Image 2026-11-06 at 15.27.09 (1).jpeg" alt="Первый проект"><h3>Digital Marketing</h3><p>Дизайн для современного бизнеса.</p></article>
+          <article class="project" data-type="web"><img src="WhatsApp Image 2026-11-06 at 15.27.10.jpeg" alt="Второй проект"><h3>Business Website</h3><p>Сайт для привлечения клиентов.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact"> <!-- Форма обратной связи -->
+      <div class="container">
+        <p class="small-title">СВЯЖИТЕСЬ С НАМИ</p>
+        <h2>Обсудим ваш проект?</h2>
+        <form id="contactForm">
+          <label for="name">Ваше имя</label> <!-- Подпись поля имени -->
+          <input id="name" type="text" placeholder="Введите имя">
+          <label for="email">Электронная почта</label> <!-- Подпись поля почты -->
+          <input id="email" type="email" placeholder="Введите email">
+          <label for="message">Сообщение</label> <!-- Подпись поля сообщения -->
+          <textarea id="message" rows="4" placeholder="Расскажите о проекте"></textarea>
+          <button class="main-btn" type="submit">Отправить</button>
+          <p id="formResult" class="form-result" aria-live="polite"></p> <!-- Здесь появится результат проверки -->
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">© 2026 Design Agency. Все права защищены.</div></footer> <!-- Нижняя часть сайта -->
+  <script src="script.js"></script> <!-- Подключаем JavaScript -->
+</body>
+</html>

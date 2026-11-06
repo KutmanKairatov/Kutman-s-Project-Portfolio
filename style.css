@@ -1,0 +1,68 @@
+/* Общие настройки страницы */
+* { box-sizing: border-box; } /* Учитываем отступы внутри ширины элементов */
+html { scroll-behavior: smooth; } /* Плавный переход к разделам */
+body { margin: 0; font-family: Arial, sans-serif; color: #17231d; background: #ffffff; line-height: 1.6; } /* Основной стиль */
+.container { width:  min(1100px, 90%); margin: auto; } /* Центрируем содержимое */
+
+/* Шапка и меню */
+.header { background: #d9f8e2; padding: 18px 0; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { color: #17231d; font-size: 22px; font-weight: bold; text-decoration: none; }
+.logo span { color: #16a765; }
+.menu { display: flex; gap: 25px; }
+.menu a { color: #17231d; text-decoration: none; }
+.menu a:hover { color: #16a765; } /* Цвет ссылки при наведении */
+.menu-btn { display: none; } /* На компьютере кнопка меню скрыта */
+.theme-btn, .menu-btn { padding: 9px 14px; border: 1px solid #16a765; border-radius: 8px; background: white; cursor: pointer; }
+
+/* Главный экран */
+.hero { background: #d9f8e2; padding: 55px 0; }
+.hero-content { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+.hero-text { max-width: 500px; }
+.small-title { color: #16a765; font-size: 13px; font-weight: bold; letter-spacing: 2px; }
+h1 { font-size: 42px; line-height: 1.15; }
+.hero-photo { width: 45%; max-height: 390px; object-fit: cover; border-radius: 18px; }
+.main-btn { display: inline-block; padding: 12px 22px; border: 0; border-radius: 8px; color: white; background: #16a765; text-decoration: none; cursor: pointer; }
+.main-btn:hover { background: #10834e; }
+
+/* Общие разделы */
+.section { padding: 65px 0; }
+h2 { font-size: 32px; margin-top: 5px; }
+.services, .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card, .project { padding: 20px; border-radius: 14px; background: #f1faf4; }
+.service-card h3, .project h3 { margin-bottom: 5px; }
+.about { background: #f1faf4; }
+.about p:last-child { max-width: 650px; }
+
+/* Портфолио и фильтр */
+.filters { display: flex; gap: 10px; margin: 20px 0; }
+.filter { padding: 8px 16px; border: 1px solid #16a765; border-radius: 20px; background: white; cursor: pointer; }
+.filter.active { color: white; background: #16a765; }
+.project { grid-column: span 1; }
+.project img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+.project.hide { display: none; }
+
+/* Форма и подвал */
+.contact { background: #f1faf4; }
+form { max-width: 500px; display: flex; flex-direction: column; gap: 9px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid #cbd8cf; border-radius: 7px; font: inherit; }
+.form-result { font-weight: bold; }
+.footer { padding: 22px 0; color: white; background: #087c4a; text-align: center; }
+
+/* Тёмная тема включается через JavaScript */
+body.dark { color: #f2f2f2; background: #18221d; }
+body.dark .header, body.dark .hero { background: #263b30; }
+body.dark .service-card, body.dark .about, body.dark .contact, body.dark .project { background: #26332c; }
+body.dark .menu a, body.dark .logo { color: white; }
+
+/* Адаптация под телефон */
+@media (max-width: 700px) {
+  .menu-btn { display: block; } /* Показываем кнопку меню */
+  .menu { display: none; position: absolute; top: 65px; left: 5%; right: 5%; padding: 18px; flex-direction: column; background: white; border-radius: 10px; z-index: 2; }
+  .menu.open { display: flex; } /* Показываем меню после нажатия */
+  .hero-content { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 32px; }
+  .hero-photo { width: 100%; max-height: 330px; }
+  .services, .projects { grid-template-columns: 1fr; } /* Карточки в один столбец */
+  .section { padding: 45px 0; }
+}
